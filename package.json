@@ -1,0 +1,26 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/A00841923/OTMANIA-Frontend-Web.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/A00841923/OTMANIA-Frontend-Web/issues"
+  },
+  
+  "scripts": {
+    "start": "node index.js"
+  },
+  "homepage": "https://github.com/A00841923/OTMANIA-Frontend-Web#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
