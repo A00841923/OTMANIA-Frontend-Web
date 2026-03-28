@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTMania - Home</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Icons (Bootstrap Icons) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+    <style>
+        @font-face {
+            font-family: '8-bit';
+            src: url('fonts/8-bit.TTF') format('truetype');
+        }
+
+        body {
+        background-color: white;
+        font-family: '8-bit', sans-serif;
+
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        }
+
+        .logo {
+        width: 100%;
+        max-width: 200px;
+        }
+
+        .top-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        }
+
+        .main-content {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nav-links a {
+        margin-left: 20px;
+        text-decoration: none;
+        color: black;
+        font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: #CD163F;
+        }
+
+        .social-icons i {
+            font-size: 24px;
+            margin-left: 15px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Top -->
+    <div class="top-bar container">
+        <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Rockwell_Automation_logo_%282019%29.svg/1280px-Rockwell_Automation_logo_%282019%29.svg.png">
+        
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="game.html">Game</a>
+            <a href="stats.html">Stats</a>
+            <a href="contact.html">Contact us</a>
+        </div>
+
+        <i class="bi bi-person-fill" style="font-size: 28px;"></i>
+    </div>
+
+    <div class="main-content">
+        <h1 class="subtitle text-center">Welcome to OTMANIA!</h1>
+    </div>
+    
+
+</body>
+</html>

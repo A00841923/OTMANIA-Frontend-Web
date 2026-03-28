@@ -3,19 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OTMANIA</title>
+    <title>OTMania - Login</title>
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
+        @font-face {
+            font-family: '8-bit';
+            src: url('fonts/8-bit.TTF') format('truetype');
+        }
+
         body {
-        background-color: #f5f5f5;
-        font-family: 'Segoe UI', sans-serif;
+        background-color: white;
+        font-family: '8-bit', sans-serif;
+
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
         }
 
         .logo {
-        width: 200px;
+        width: 100%;
+        max-width: 200px;
         }
 
         .login-box {
@@ -28,12 +38,17 @@
         background-color:#CD163F;
         color: white;
         border: none;
-        height: 60px;
-        font-size: 18px;
+        height: 50px;
+        font-size: 16px;
         }
 
         .form-control::placeholder {
         color: #f0f0f0;
+        }
+
+        .form-control:focus {
+        background-color: #CD163F;
+        color: white;
         }
 
         .btn-custom {
@@ -54,15 +69,26 @@
         padding: 20px;
         }
 
-        .user-icon {
-        font-size: 30px;
-        }
-
         .subtitle {
-        text-align: center;
-        margin-top: 50px;
+            text-align: center;
+            margin-top: 20px;
         }
 
+        .nav-links a {
+        margin-left: 20px;
+        text-decoration: none;
+        color: black;
+        font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: #CD163F;
+        }
+
+        .main-content {
+            flex-grow: 1;
+        }
+        
     </style>
 </head>
 
@@ -80,29 +106,29 @@
     </div>
 
     <!-- Login -->
-    <div class="container d-flex justify-content-center align-items-center" style="height: 60vh;">
-        <div class="col-md-6 login-box text-center">
+    <div class="main-content container d-flex justify-content-center align-items-center">
+    <div class="col-11 col-sm-8 col-md-6 login-box text-center">
 
         <h5 class="mb-4">Login</h5>
 
         <form>
             <div class="mb-3">
-            <input type="email" class="form-control" placeholder="Email">
+                <input type="email" class="form-control" placeholder="Email">
             </div>
 
             <div class="mb-2">
-            <input type="password" class="form-control" placeholder="Password">
+                <input type="password" class="form-control" placeholder="Password">
             </div>
 
             <div class="text-end mb-3">
-            <small>Forgot your password?</small>
+                <small>Forgot your password?</small>
             </div>
 
             <button class="btn btn-custom">Submit</button>
         </form>
 
-        </div>
     </div>
+</div>
 
     <!-- Bottom -->
     <div class="text-center mt-4">
