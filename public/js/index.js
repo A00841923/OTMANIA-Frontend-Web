@@ -14,12 +14,29 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     async function validarLogin(){
+
+        // Validate input fields
+        if(email.value.trim() === "" && password.value.trim() === ""){
+            errorMessage.textContent = "Please enter your email and password";
+            return;
+        }
+
+        if(email.value.trim() === ""){
+            errorMessage.textContent = "Email cannot be empty";
+            return;
+        }
+
+        if(password.value.trim() === ""){
+            errorMessage.textContent = "Password cannot be empty";
+            return;
+        }
+
         const credentials = {
             Email: email.value,
             Password: password.value
         };
 
-        const res = await fetch("http://localhost:3000/login", {
+        const res = await fetch("https://otmania-api.onrender.com/login", {
             method:"POST", 
             headers:{"Content-Type":"application/json"}, 
             body:JSON.stringify(credentials)
@@ -28,11 +45,23 @@ document.addEventListener("DOMContentLoaded", () => {
         const data = await res.json();
         console.log(data);
 
+        // Data validation handling
+        if(res.status === 401){
+            errorMessage.textContent = "Email or password is incorrect";
+            return;
+        }
+
+        // Server error handling
+        if(!res.ok){
+            errorMessage.textContent = "Login failed. Please try again";
+            return;
+        }
+
+        // Login success handling
         if(data.isLogin == true){
+            errorMessage.textContent = "Login successful!";
             sessionStorage.setItem("id", data.user.IDUser);
             window.location = "./home.html";
-        }else{
-            errorMessage.textContent = "Email or password is incorrect.";
         }
     }
 });
