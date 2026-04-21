@@ -3,7 +3,7 @@ const btn = document.getElementById("fsBtn");
 const gameFrame = document.getElementById("game-frame");
 
 if (sessionStorage.getItem("id")) {
-        gameFrame.src = "/blablabla.html?id=" + sessionStorage.getItem("id");
+        gameFrame.src = "OTMANIA_GAME/index.html?id=" + sessionStorage.getItem("id");
     }
 
 function toggleFullScreen() {
