@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         try {
             const userType = document.getElementById("userType").value;
-            const res = await fetch("http://localhost:3000/send-code", {
+            const res = await fetch("http://localhost:3000/api/auth/send-code", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 return;
             }
-            
+
             // Save email for verification step
             currentEmail = email;
 
@@ -139,7 +139,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         try {
-            const res = await fetch("http://localhost:3000/verify-code", {
+            const res = await fetch("http://localhost:3000/api/auth/verify-code", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
