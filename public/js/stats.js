@@ -54,6 +54,7 @@ async function loadBarChart() {
             },
             options: {
                 responsive: true,
+                indexAxis: 'y',
                 plugins: {
                     legend: {
                         display: true
