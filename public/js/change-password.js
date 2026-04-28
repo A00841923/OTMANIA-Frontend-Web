@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         try {
-            const res = await fetch("http://localhost:3000/request-reset", {
+            const res = await fetch("https://otmania-api-nofy.onrender.com/request-reset", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         try {
-            const res = await fetch("http://localhost:3000/verify-code", {
+            const res = await fetch("https://otmania-api-nofy.onrender.com/verify-code", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -176,7 +176,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         try {
-            const res = await fetch("http://localhost:3000/reset-password", {
+            const res = await fetch("https://otmania-api-nofy.onrender.com/reset-password", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

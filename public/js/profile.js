@@ -9,7 +9,7 @@ console.log("SESSION:", sessionStorage);
 console.log("ID:", sessionStorage.getItem("iduser"));
 
 try {
-    const response = await fetch(`http://localhost:3000/users/profile/${id}`);
+    const response = await fetch(`https://otmania-api-nofy.onrender.com/users/profile/${id}`);
     const data = await response.json();
     console.log(data);
 

@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:3000/api/stats";
+const API_URL = "https://otmania-api-nofy.onrender.com/api/stats";
 
 const iduser = sessionStorage.getItem("iduser");
 const userType = sessionStorage.getItem("userType");
